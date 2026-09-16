@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Data
+data/
+!data/README.md
+
+# Trained models
+models/*.pkl
+models/*.joblib
+
+# OS files
+.DS_Store
+Thumbs.db
