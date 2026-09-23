@@ -248,23 +248,23 @@ model = RandomForestClassifier(
 
 model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
-"""
-from sklearn.metrics import accuracy_score
 
-accuracy = accuracy_score(y_test, y_pred)
+from sklearn.metrics import (
+    accuracy_score,
+    confusion_matrix,
+    classification_report
+)
 
-print("Accuracy:", accuracy)
-from sklearn.metrics import confusion_matrix, classification_report
+y_pred = model.predict(X_test)
 
+print("Accuracy:", accuracy_score(y_test, y_pred))
+
+print("\nConfusion Matrix:")
 print(confusion_matrix(y_test, y_pred))
 
+print("\nClassification Report:")
 print(classification_report(y_test, y_pred))
 
-"""
-importance = pd.Series(
-    model.feature_importances_,
-    index=features
-).sort_values(ascending=False)
 
-print(importance)
+
 
